@@ -1,0 +1,44 @@
+﻿<Page x:Class="ClientBook.Pages.LandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientBook.Pages"
+      mc:Ignorable="d" 
+         d:DesignHeight="564" d:DesignWidth="1050"
+      Title="LandingPage">
+
+    <Grid>
+        <Canvas Grid.Column="1" Grid.Row="1">
+            <TextBlock TextAlignment="center" Canvas.Top="34" Canvas.Left="47" FontFamily="Constantia" FontSize="40" RenderTransformOrigin="0.533,1.763">
+                Welcome, Valued Client
+            </TextBlock>
+            <Border Canvas.Left="140" Canvas.Bottom="100" BorderThickness="2" BorderBrush="DarkBlue">
+                <StackPanel Background="LightBlue" Width="225" Height="320" Canvas.Left="98" Canvas.Top="103" RenderTransformOrigin="0.487,0.472">
+                    <TextBlock TextAlignment="center" FontSize="60" >
+                    Clients
+                    </TextBlock>
+
+                    <TextBlock TextAlignment="Center" FontSize="30">
+                    Active
+                    </TextBlock>
+                    <Separator BorderBrush="AliceBlue"/>
+                    <TextBlock TextAlignment="center" FontSize="145" >
+                        #
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+
+            <Border Canvas.Right="80" Canvas.Bottom="90" BorderThickness="2" BorderBrush="DarkBlue">
+                <StackPanel Background="LightBlue" Width="450" Height="390" Canvas.Left="98" Canvas.Top="103" RenderTransformOrigin="0.487,0.472">
+                    <TextBlock TextAlignment="center" FontSize="60" >
+                    Recent Clients
+                    </TextBlock>
+                    <Separator BorderBrush="AliceBlue"/>
+
+                </StackPanel>
+            </Border>
+
+        </Canvas>
+    </Grid>
+</Page>
