@@ -47,6 +47,6 @@
         </Frame>
 
         <Separator  Grid.ColumnSpan="2" Grid.Column="0"   Grid.Row="1" VerticalAlignment="Top" Margin="0" />
-        <Rectangle HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row=" 1" Grid.RowSpan="2" Fill="blue" Width="1"/>
+        <Rectangle HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row=" 1" Grid.RowSpan="2" Fill="LightBlue" Width="1"/>
     </Grid>
 </Window>

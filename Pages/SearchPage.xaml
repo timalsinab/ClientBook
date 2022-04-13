@@ -20,16 +20,20 @@
             <ColumnDefinition Width="25"/>
         </Grid.ColumnDefinitions>
 
-        <WrapPanel Grid.Row="1" Grid.Column="1">
-            <TextBlock Margin="40,0" FontSize="45">Search by</TextBlock>
-            <ComboBox Margin="40,0" FontSize ="30" Width="140">
-                <ComboBoxItem IsSelected="True" FontSize="30">Name</ComboBoxItem>
+        <WrapPanel Grid.Row="1" Grid.Column="1" >
+            <TextBlock Margin="55,0,20,0" FontSize="45">Search by:</TextBlock>
+            <ComboBox Background="LightBlue" VerticalAlignment="Center" Text="Select" Height="55" Margin="40,0" FontSize ="30" Width="200">
+                <ComboBoxItem FontSize="30">Name</ComboBoxItem>
                 <ComboBoxItem FontSize="30">Address</ComboBoxItem>
-                
+                <ComboBoxItem FontSize="30">Number</ComboBoxItem>
             </ComboBox>
+            <TextBlock  FontSize="45">Data:</TextBlock>
+            <TextBox VerticalAlignment="Center" TextAlignment="Center" Height ="55"  Width="250" Background="LightBlue" Margin="40,0" FontSize="25"/>
+
         </WrapPanel>
+        <Rectangle StrokeThickness="3" Stroke="Blue" Grid.ColumnSpan="3" Grid.Row="1" Height="3" VerticalAlignment="Bottom" Fill="DarkBlue" HorizontalAlignment="Stretch"/>
 
-
+        <DataGrid Grid.Row="2" Grid.ColumnSpan="2" Width=" 750" Height="350"/>
 
     </Grid>
 </Page>
