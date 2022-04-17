@@ -33,7 +33,7 @@
         </WrapPanel>
         <Rectangle StrokeThickness="3" Stroke="Blue" Grid.ColumnSpan="3" Grid.Row="1" Height="3" VerticalAlignment="Bottom" Fill="DarkBlue" HorizontalAlignment="Stretch"/>
 
-        <DataGrid Grid.Row="2" Grid.ColumnSpan="2" Width=" 750" Height="350"/>
+        <DataGrid x:Name="ClientGrid" Grid.Row="2" Grid.Column="1" Margin="33,32,27,50" FontSize="20"/>
 
     </Grid>
 </Page>

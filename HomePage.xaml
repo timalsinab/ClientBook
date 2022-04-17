@@ -31,7 +31,7 @@
                 <RowDefinition Height="*"/>
 
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Background="White" Click="Button_Click">
+            <Button Grid.Row="0" Background="White" Click="Button_Click" BorderBrush="Gray" >
                 <Image Source="Resources\HomePage_Icon.png"/>
             </Button>
 

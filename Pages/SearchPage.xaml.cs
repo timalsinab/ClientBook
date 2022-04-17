@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClientBook.Database;
+
 
 namespace ClientBook.Pages
 {
@@ -23,6 +25,29 @@ namespace ClientBook.Pages
         public SearchPage()
         {
             InitializeComponent();
+
+            ClientManagementSystemEntities db = new ClientManagementSystemEntities();
+            var clients = from c in db.Clientlists
+                          select new
+                          {
+                              ClientName = c.Name,
+                              ClientAddress = c.Address,
+                              ClientNumber = c.Number,
+                              ClientEmail = c.Email
+                          };
+
+            foreach(var item in clients)
+            {
+                Console.WriteLine(item.ClientName);
+                Console.WriteLine(item.ClientAddress);
+                Console.WriteLine(item.ClientNumber);
+                Console.WriteLine(item.ClientEmail);
+                Console.WriteLine("------------------");
+            }
+
+            this.ClientGrid.ItemsSource = clients.ToList();
+           
+
         }
     }
 }

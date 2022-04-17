@@ -14,6 +14,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -56,9 +56,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
@@ -93,26 +91,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Database\Admin.cs">
-      <DependentUpon>ClientManagementBook.tt</DependentUpon>
+    <Compile Include="Database\Clientlist.cs">
+      <DependentUpon>ClientManagementSystemModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Client.cs">
-      <DependentUpon>ClientManagementBook.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\ClientManagementBook.Context.cs">
+    <Compile Include="Database\ClientManagementSystemModels.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ClientManagementBook.Context.tt</DependentUpon>
+      <DependentUpon>ClientManagementSystemModels.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\ClientManagementBook.cs">
+    <Compile Include="Database\ClientManagementSystemModels.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ClientManagementBook.tt</DependentUpon>
+      <DependentUpon>ClientManagementSystemModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\ClientManagementBook.Designer.cs">
+    <Compile Include="Database\ClientManagementSystemModels.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ClientManagementBook.edmx</DependentUpon>
+      <DependentUpon>ClientManagementSystemModels.edmx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -154,12 +149,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Database\ClientManagementBook.edmx">
+    <EntityDeploy Include="Database\ClientManagementSystemModels.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ClientManagementBook.Designer.cs</LastGenOutput>
+      <LastGenOutput>ClientManagementSystemModels.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Database\ClientManagementBook.edmx.diagram">
-      <DependentUpon>ClientManagementBook.edmx</DependentUpon>
+    <None Include="Database\ClientManagementSystemModels.edmx.diagram">
+      <DependentUpon>ClientManagementSystemModels.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -169,32 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ClientList.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ClientList_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ClientList.mdf</DependentUpon>
-    </Content>
-    <Content Include="Database\ClientList.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database\ClientList_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ClientList.mdf</DependentUpon>
-    </Content>
-    <Content Include="Database\ClientManagementBook.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ClientManagementBook.Context.cs</LastGenOutput>
-      <DependentUpon>ClientManagementBook.edmx</DependentUpon>
-    </Content>
-    <Content Include="Database\ClientManagementBook.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ClientManagementBook.edmx</DependentUpon>
-      <LastGenOutput>ClientManagementBook.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\CMS_Logo.png" />
@@ -215,6 +184,27 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Database\ClientManagementSystem.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\ClientManagementSystemModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClientManagementSystemModels.edmx</DependentUpon>
+      <LastGenOutput>ClientManagementSystemModels.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\ClientManagementSystemModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClientManagementSystemModels.edmx</DependentUpon>
+      <LastGenOutput>ClientManagementSystemModels.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\ClientManagementSystem_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ClientManagementSystem.mdf</DependentUpon>
+    </Content>
+    <Resource Include="Resources\Add_ClientIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
