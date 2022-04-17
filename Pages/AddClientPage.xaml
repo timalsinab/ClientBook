@@ -1,0 +1,38 @@
+﻿<Page x:Class="ClientBook.Pages.AddClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ClientBook.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="564" d:DesignWidth="1050" FontSize="60"
+      Title="AddClientPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="135"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="125"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Text="Client Information" FontSize="85" TextAlignment="Center" Margin="25,0,0,0"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Name:" Margin="0,15,0,0"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Address:"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Number:"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="Email:"/>
+
+        <TextBox Grid.Row="1" Grid.Column="3" Width="250" Height="85" VerticalAlignment="Bottom" Margin="55,0,0,0"/>
+        <TextBox Grid.Row="2" Grid.Column="3" Width="250" Height="85" VerticalAlignment="Bottom" Margin="55,0,0,0"/>
+        <TextBox Grid.Row="3" Grid.Column="3" Width="250" Height="85" VerticalAlignment="Bottom" Margin="55,0,0,0"/>
+        <TextBox Grid.Row="4" Grid.Column="3" Width="250" Height="85" VerticalAlignment="Bottom" Margin="55,0,0,0"/>
+    </Grid>
+</Page>

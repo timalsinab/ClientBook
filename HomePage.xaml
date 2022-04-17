@@ -23,22 +23,27 @@
             </TextBlock>
         </StackPanel>
 
-        <Grid Grid.Column="0" Grid.Row="1">
+        <Grid Grid.Column="0" Grid.Row="1" Background="LightGray">
             <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
 
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Background="White" Click="Button_Click" BorderBrush="Gray" >
+            <Button Grid.Row="0" Background="LightGray" Click="Button_Click" BorderThickness="1" >
                 <Image Source="Resources\HomePage_Icon.png"/>
             </Button>
 
-            <Separator Grid.Row ="1" BorderBrush="Black" Margin="0,15"/>
-            <Button Grid.Row="2" Background="white" Click="Search_Cick" HorizontalAlignment="Left" Width="100">
+           
+            <Button Grid.Row="2" Background="LightGray" Click="Search_Cick" HorizontalAlignment="Left" Width="100" BorderThickness="1">
                 <Image Grid.Row="2" Source="Resources\Search_Icon.png" Margin="10"/>
             </Button>
+
+            <Button Grid.Row ="4" Background="lightgray" Click ="Add_Click" HorizontalAlignment="Left" Width="100"  BorderThickness="1"/>
+            <Image Grid.Row="4" Source="Resources\Add_ClientIcon.png" Margin="10"/>
 
         </Grid>
 
@@ -47,6 +52,6 @@
         </Frame>
 
         <Separator  Grid.ColumnSpan="2" Grid.Column="0"   Grid.Row="1" VerticalAlignment="Top" Margin="0" />
-        <Rectangle HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row=" 1" Grid.RowSpan="2" Fill="LightBlue" Width="1"/>
+        <Rectangle HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row=" 1" Grid.RowSpan="2" Fill="DarkBlue" Width="1"/>
     </Grid>
 </Window>
