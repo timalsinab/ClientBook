@@ -23,7 +23,7 @@ namespace ClientBook
         public HomePage()
         {
             InitializeComponent();
-            mainFrame.Navigate(new LandingPage()); 
+            mainFrame.Navigate(new LandingPage());
         }
 
         private void Search_Cick(object sender, RoutedEventArgs e)
@@ -34,6 +34,11 @@ namespace ClientBook
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new LandingPage());
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new AddClientPage());
         }
     }
 }

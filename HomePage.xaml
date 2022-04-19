@@ -42,9 +42,9 @@
                 <Image Grid.Row="2" Source="Resources\Search_Icon.png" Margin="10"/>
             </Button>
 
-            <Button Grid.Row ="4" Background="lightgray" Click ="Add_Click" HorizontalAlignment="Left" Width="100"  BorderThickness="1"/>
-            <Image Grid.Row="4" Source="Resources\Add_ClientIcon.png" Margin="10"/>
-
+            <Button Grid.Row ="4" Background="lightgray" Click ="Add_Click" HorizontalAlignment="Left" Width="100"  BorderThickness="1">
+                <Image Grid.Row="4" Source="Resources\Add_ClientIcon.png" Margin="10"/>
+            </Button>
         </Grid>
 
         <Frame Name="mainFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden">

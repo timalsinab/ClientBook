@@ -211,6 +211,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ClientManagementSystem.mdf</DependentUpon>
     </Content>
+    <Resource Include="Resources\Add_AddIcon.png" />
+    <Resource Include="Resources\Add_ProfileIcon.png" />
     <Resource Include="Resources\Add_ClientIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

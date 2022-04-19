@@ -5,34 +5,41 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ClientBook.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="564" d:DesignWidth="1050" FontSize="60"
+      d:DesignHeight="664" d:DesignWidth="1150" FontSize="45" Background="White"
       Title="AddClientPage">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="135"/>
+            <ColumnDefinition Width="55"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="5"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="125"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="125"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Text="Client Information" FontSize="85" TextAlignment="Center" Margin="25,0,0,0"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Name:" Margin="0,15,0,0"/>
-        <TextBlock Grid.Row="2" Grid.Column="1" Text="Address:"/>
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="Number:"/>
-        <TextBlock Grid.Row="4" Grid.Column="1" Text="Email:"/>
+        <Rectangle Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="4" Fill="LightGray" RadiusY="37.667" RadiusX="37.667"  />
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" Text="Client Information" FontSize="85" TextAlignment="Center" Margin="10.667,0,125.667,0.333" Grid.Column="1"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Name:" Margin="30,15"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Address:" Margin="30,10" />
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Number:" Margin="30,10"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="Email:" Margin="30,10"/>
 
-        <TextBox Grid.Row="1" Grid.Column="3" Width="250" Height="85" VerticalAlignment="Bottom" Margin="55,0,0,0"/>
-        <TextBox Grid.Row="2" Grid.Column="3" Width="250" Height="85" VerticalAlignment="Bottom" Margin="55,0,0,0"/>
-        <TextBox Grid.Row="3" Grid.Column="3" Width="250" Height="85" VerticalAlignment="Bottom" Margin="55,0,0,0"/>
-        <TextBox Grid.Row="4" Grid.Column="3" Width="250" Height="85" VerticalAlignment="Bottom" Margin="55,0,0,0"/>
+        <TextBox Grid.Row="1" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
+        <TextBox Grid.Row="2" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
+        <TextBox Grid.Row="3" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
+        <TextBox Grid.Row="4" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
+
+        <Image Source="C:\Users\Kharela\source\repos\ClientBook\Resources\Add_ProfileIcon.png" Grid.Column="4" Grid.RowSpan="3" Margin="62,10,-228,10" />
+        <Button Grid.Column="4" Grid.Row="3" Margin="62,48,-114,45" Grid.RowSpan="2" >
+            <Image Source="C:\Users\Kharela\source\repos\ClientBook\Resources\Add_AddIcon.png" RenderTransformOrigin="0.541,0.514" Height="117" Width="168"/>
+        </Button>
+
     </Grid>
 </Page>
