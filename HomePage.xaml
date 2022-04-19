@@ -33,16 +33,16 @@
                 <RowDefinition Height="*"/>
 
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Background="LightGray" Click="Button_Click" BorderThickness="1" >
+            <Button x:Name="HomeButton" Grid.Row="0" Background="LightGray" Click="Button_Click" BorderThickness="1" >
                 <Image Source="Resources\HomePage_Icon.png"/>
             </Button>
 
            
-            <Button Grid.Row="2" Background="LightGray" Click="Search_Cick" HorizontalAlignment="Left" Width="100" BorderThickness="1">
+            <Button x:Name="SearchButton" Grid.Row="2" Background="LightGray" Click="Search_Cick" HorizontalAlignment="Left" Width="100" BorderThickness="1">
                 <Image Grid.Row="2" Source="Resources\Search_Icon.png" Margin="10"/>
             </Button>
 
-            <Button Grid.Row ="4" Background="lightgray" Click ="Add_Click" HorizontalAlignment="Left" Width="100"  BorderThickness="1">
+            <Button x:Name="AddButton" Grid.Row ="4" Background="lightgray" Click ="Add_Click" HorizontalAlignment="Left" Width="100"  BorderThickness="1">
                 <Image Grid.Row="4" Source="Resources\Add_ClientIcon.png" Margin="10"/>
             </Button>
         </Grid>

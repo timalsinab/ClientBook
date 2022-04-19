@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClientBook.Database;
 
 
 namespace ClientBook.Pages
@@ -24,6 +25,19 @@ namespace ClientBook.Pages
         public AddClientPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var clientName = NameEntry.Text;
+            var clientAddress = AddressEntry.Text;
+            var clientNumber = NumberEntry.Text;
+            var clientEmail = EmailEntry.Text;
+
+            ClientManagementSystemEntities db = new ClientManagementSystemEntities();
+            
+           
+
         }
     }
 }

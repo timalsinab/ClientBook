@@ -17,7 +17,7 @@
             <ColumnDefinition Width="125"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="125"/>
+            <RowDefinition Height="155"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -31,13 +31,13 @@
         <TextBlock Grid.Row="3" Grid.Column="1" Text="Number:" Margin="30,10"/>
         <TextBlock Grid.Row="4" Grid.Column="1" Text="Email:" Margin="30,10"/>
 
-        <TextBox Grid.Row="1" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
-        <TextBox Grid.Row="2" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
-        <TextBox Grid.Row="3" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
-        <TextBox Grid.Row="4" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
+        <TextBox x:Name="NameEntry" Grid.Row="1" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10" />
+        <TextBox x:Name="AddressEntry" Grid.Row="2" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
+        <TextBox x:Name="NumberEntry" Grid.Row="3" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
+        <TextBox x:Name="EmailEntry" Grid.Row="4" Grid.Column="3" Width="350" Height="85" VerticalAlignment="Bottom" Margin="55,10"/>
 
-        <Image Source="C:\Users\Kharela\source\repos\ClientBook\Resources\Add_ProfileIcon.png" Grid.Column="4" Grid.RowSpan="3" Margin="62,10,-228,10" />
-        <Button Grid.Column="4" Grid.Row="3" Margin="62,48,-114,45" Grid.RowSpan="2" >
+        <Image Source="C:\Users\Kharela\source\repos\ClientBook\Resources\Add_ProfileIcon.png" Grid.Column="4" Grid.RowSpan="4" Margin="60,62,-226,64" />
+        <Button Grid.Column="4" Grid.Row="4" Margin="90,10.333,-188,44" Grid.RowSpan="2" Click="Button_Click" >
             <Image Source="C:\Users\Kharela\source\repos\ClientBook\Resources\Add_AddIcon.png" RenderTransformOrigin="0.541,0.514" Height="117" Width="168"/>
         </Button>
 

@@ -23,22 +23,48 @@ namespace ClientBook
         public HomePage()
         {
             InitializeComponent();
-            mainFrame.Navigate(new LandingPage());
+            LandingPage lp = new LandingPage();
+            mainFrame.Navigate(lp);
         }
 
         private void Search_Cick(object sender, RoutedEventArgs e)
         {
+            button_Highlighter(2);
             mainFrame.Navigate(new SearchPage());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            button_Highlighter(1);
             mainFrame.Navigate(new LandingPage());
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            button_Highlighter(3);
             mainFrame.Navigate(new AddClientPage());
+        }
+
+        private void button_Highlighter(int buttonnum)
+        {
+            
+            HomeButton.Background = Brushes.LightGray;
+            SearchButton.Background = Brushes.LightGray;
+            AddButton.Background = Brushes.LightGray;
+
+            switch (buttonnum)
+            {
+                case 1: HomeButton.Background = Brushes.LightSkyBlue;
+                    break;
+                case 2: SearchButton.Background = Brushes.LightSkyBlue;
+                    break;
+                case 3: AddButton.Background = Brushes.LightSkyBlue;
+                    break;
+                default:
+                    break;
+            }
+
+
         }
     }
 }
