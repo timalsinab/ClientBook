@@ -91,23 +91,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Database\Admin.cs">
+      <DependentUpon>ClientManagementSystem.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\Clientlist.cs">
-      <DependentUpon>ClientManagementSystemModels.tt</DependentUpon>
+      <DependentUpon>ClientManagementSystem.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\ClientManagementSystemModels.Context.cs">
+    <Compile Include="Database\ClientManagementSystem.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ClientManagementSystemModels.Context.tt</DependentUpon>
+      <DependentUpon>ClientManagementSystem.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\ClientManagementSystemModels.cs">
+    <Compile Include="Database\ClientManagementSystem.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ClientManagementSystemModels.tt</DependentUpon>
+      <DependentUpon>ClientManagementSystem.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\ClientManagementSystemModels.Designer.cs">
+    <Compile Include="Database\ClientManagementSystem.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ClientManagementSystemModels.edmx</DependentUpon>
+      <DependentUpon>ClientManagementSystem.edmx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -117,6 +120,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\AddClientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EditClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,6 +139,9 @@
   <ItemGroup>
     <Compile Include="Pages\AddClientPage.xaml.cs">
       <DependentUpon>AddClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditClient.xaml.cs">
+      <DependentUpon>EditClient.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\LandingPage.xaml.cs">
       <DependentUpon>LandingPage.xaml</DependentUpon>
@@ -156,12 +166,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Database\ClientManagementSystemModels.edmx">
+    <EntityDeploy Include="Database\ClientManagementSystem.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ClientManagementSystemModels.Designer.cs</LastGenOutput>
+      <LastGenOutput>ClientManagementSystem.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Database\ClientManagementSystemModels.edmx.diagram">
-      <DependentUpon>ClientManagementSystemModels.edmx</DependentUpon>
+    <None Include="Database\ClientManagementSystem.edmx.diagram">
+      <DependentUpon>ClientManagementSystem.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -194,23 +204,26 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Database\ClientManagementSystem.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClientManagementSystem.edmx</DependentUpon>
+      <LastGenOutput>ClientManagementSystem.Context.cs</LastGenOutput>
+    </Content>
     <Content Include="Database\ClientManagementSystem.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database\ClientManagementSystemModels.Context.tt">
+    <Content Include="Database\ClientManagementSystem.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ClientManagementSystemModels.edmx</DependentUpon>
-      <LastGenOutput>ClientManagementSystemModels.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Database\ClientManagementSystemModels.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ClientManagementSystemModels.edmx</DependentUpon>
-      <LastGenOutput>ClientManagementSystemModels.cs</LastGenOutput>
+      <DependentUpon>ClientManagementSystem.edmx</DependentUpon>
+      <LastGenOutput>ClientManagementSystem.cs</LastGenOutput>
     </Content>
     <Content Include="Database\ClientManagementSystem_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ClientManagementSystem.mdf</DependentUpon>
     </Content>
+    <Resource Include="Resources\Edit_UnlockedIcon.png" />
+    <Resource Include="Resources\Edit_LockedIcon.png" />
+    <Resource Include="Resources\Edit_ClientIcon.png" />
     <Resource Include="Resources\Add_AddIcon.png" />
     <Resource Include="Resources\Add_ProfileIcon.png" />
     <Resource Include="Resources\Add_ClientIcon.png" />

@@ -13,10 +13,10 @@ namespace ClientBook.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ClientManagementSystemEntities : DbContext
+    public partial class ClientManagementSystemEntities1 : DbContext
     {
-        public ClientManagementSystemEntities()
-            : base("name=ClientManagementSystemEntities")
+        public ClientManagementSystemEntities1()
+            : base("name=ClientManagementSystemEntities1")
         {
         }
     
@@ -25,6 +25,7 @@ namespace ClientBook.Database
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Clientlist> Clientlists { get; set; }
     }
 }

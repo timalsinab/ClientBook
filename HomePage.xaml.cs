@@ -42,7 +42,7 @@ namespace ClientBook
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             button_Highlighter(3);
-            mainFrame.Navigate(new AddClientPage());
+            mainFrame.Navigate(new EditClient());
         }
 
         private void button_Highlighter(int buttonnum)

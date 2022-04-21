@@ -26,7 +26,7 @@ namespace ClientBook.Pages
         {
             InitializeComponent();
 
-            ClientManagementSystemEntities db = new ClientManagementSystemEntities();
+            ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
             var clients = from c in db.Clientlists
                           select new
                           {
