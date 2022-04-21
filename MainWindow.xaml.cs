@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClientBook.Database;
 
 namespace ClientBook
 {
@@ -27,9 +28,20 @@ namespace ClientBook
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
+      
             var newForm = new HomePage();
             newForm.Show();
             this.Close();
         }
+
+        private string validator(string Pusername)
+        {
+            
+
+
+            return "a";
+        }
+
     }
 }

@@ -12,31 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ClientBook.Database;
-
 
 namespace ClientBook.Pages
 {
     /// <summary>
-    /// Interaction logic for AddClientPage.xaml
+    /// Interaction logic for EditClient.xaml
     /// </summary>
-    public partial class AddClientPage : Page
+    public partial class EditClient : Page
     {
-        public AddClientPage()
+        public EditClient()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Locked_Click(object sender, RoutedEventArgs e)
         {
-            var clientName = NameEntry.Text;
-            var clientAddress = AddressEntry.Text;
-            var clientNumber = NumberEntry.Text;
-            var clientEmail = EmailEntry.Text;
-
-         
-            
-           
 
         }
     }
