@@ -17,8 +17,8 @@
             <RowDefinition Height ="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Height="60" Background="LightBlue">
-            <TextBlock Height="60" TextAlignment="center" FontSize="40" FontFamily="Microsoft JhengHei">
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Height="60" Background="Navy">
+            <TextBlock Foreground="WhiteSmoke" Height="60" TextAlignment="center" FontSize="40" FontFamily="Microsoft JhengHei">
                 ClientBook
             </TextBlock>
         </StackPanel>
@@ -34,24 +34,21 @@
 
             </Grid.RowDefinitions>
             <Button x:Name="HomeButton" Grid.Row="0" Background="LightGray" Click="Button_Click" BorderThickness="1" >
-                <Image Source="Resources\HomePage_Icon.png"/>
+                <Image  Margin="10" Source="Resources\HomePage_Icon.png"/>
             </Button>
 
-           
             <Button x:Name="SearchButton" Grid.Row="2" Background="LightGray" Click="Search_Cick" HorizontalAlignment="Left" Width="100" BorderThickness="1">
-                <Image Grid.Row="2" Source="Resources\Search_Icon.png" Margin="10"/>
+                <Image  Grid.Row="2" Source="Resources\Search_Icon.png" Margin="15"/>
             </Button>
 
             <Button x:Name="AddButton" Grid.Row ="4" Background="lightgray" Click ="Add_Click" HorizontalAlignment="Left" Width="100"  BorderThickness="1">
-                <Image Grid.Row="4" Source="Resources\Add_ClientIcon.png" Margin="10"/>
+                <Image  Grid.Row="4" Source="Resources\Add_ClientIcon.png" Margin="10"/>
             </Button>
         </Grid>
 
         <Frame Name="mainFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden">
-
         </Frame>
-
-        <Separator  Grid.ColumnSpan="2" Grid.Column="0"   Grid.Row="1" VerticalAlignment="Top" Margin="0" />
-        <Rectangle HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row=" 1" Grid.RowSpan="2" Fill="DarkBlue" Width="1"/>
+        <Separator Background="LightBlue"  Grid.ColumnSpan="2" Grid.Column="0"   Grid.Row="1" VerticalAlignment="Top" Margin="0" />
+        <Rectangle HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row=" 1" Grid.RowSpan="2" Fill="DarkCyan" Width="3"/>
     </Grid>
 </Window>
