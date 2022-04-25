@@ -20,10 +20,11 @@ namespace ClientBook
     /// </summary>
     public partial class HomePage : Window
     {
-        public HomePage()
+        
+        public HomePage(String name)
         {
             InitializeComponent();
-            LandingPage lp = new LandingPage();
+             LandingPage lp = new LandingPage(name);
             mainFrame.Navigate(lp);
         }
 
@@ -36,7 +37,7 @@ namespace ClientBook
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             button_Highlighter(1);
-            mainFrame.Navigate(new LandingPage());
+            mainFrame.Navigate(new LandingPage(Name));
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)

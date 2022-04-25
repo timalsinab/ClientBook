@@ -31,33 +31,32 @@ namespace ClientBook
             string username = EntryUsername.Text;
             string password = EntryPassword.Password.ToString();
 
-            if (validator(username, password))
-            {
-                var newForm = new HomePage();
-                newForm.Show();
-                this.Close();
-            }
+            validator(username, password);
            
         }
 
-        private bool validator(string Pusername,string Ppassword)
+        private void validator(string Pusername,string Ppassword)
         { 
             ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
             string password = " ";
+            string name = " ";
 
             try
             {
                 var admins = from a in db.Admins
-                             where a.Username.Equals("Anishk")
+                             where a.Username.Equals(Pusername)
                              select a;
                 foreach (var i in admins)
                 {
                     password = i.Password;
+                    name = i.Name;
                 }
 
                 if (password.Equals(Ppassword))
                 {
-                    return true;
+                    var newForm = new HomePage(name);
+                    newForm.Show();
+                    this.Close();
                 }
                 else
                 {
@@ -66,13 +65,10 @@ namespace ClientBook
 
             }
 
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show("Incorrect Username or Password\n Please try again!");
             }
-
-
-            return false;
            
         }
 
