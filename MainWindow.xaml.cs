@@ -28,19 +28,52 @@ namespace ClientBook
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-      
-            var newForm = new HomePage();
-            newForm.Show();
-            this.Close();
+            string username = EntryUsername.Text;
+            string password = EntryPassword.Password.ToString();
+
+            if (validator(username, password))
+            {
+                var newForm = new HomePage();
+                newForm.Show();
+                this.Close();
+            }
+           
         }
 
-        private string validator(string Pusername)
-        {
-            
+        private bool validator(string Pusername,string Ppassword)
+        { 
+            ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
+            string password = " ";
+
+            try
+            {
+                var admins = from a in db.Admins
+                             where a.Username.Equals("Anishk")
+                             select a;
+                foreach (var i in admins)
+                {
+                    password = i.Password;
+                }
+
+                if (password.Equals(Ppassword))
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Username or Password\n Please try again!");
+                }
+
+            }
+
+            catch(Exception e)
+            {
+                MessageBox.Show("Incorrect Username or Password\n Please try again!");
+            }
 
 
-            return "a";
+            return false;
+           
         }
 
     }
