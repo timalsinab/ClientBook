@@ -10,8 +10,8 @@
 
     <Grid>
         <Canvas Grid.Column="1" Grid.Row="1">
-            <TextBlock TextAlignment="center" Canvas.Top="34" Canvas.Left="47" FontFamily="Constantia" FontSize="40" RenderTransformOrigin="0.533,1.763">
-                Welcome, Valued Client
+            <TextBlock x:Name="WelcomeText" TextAlignment="center" Canvas.Top="34" Canvas.Left="47" FontFamily="Constantia" FontSize="40" RenderTransformOrigin="0.533,1.763">
+                
             </TextBlock>
             <Border Canvas.Left="140" Canvas.Bottom="100" BorderThickness="2" BorderBrush="DarkBlue">
                 <StackPanel Background="LightBlue" Width="225" Height="320" Canvas.Left="98" Canvas.Top="103" RenderTransformOrigin="0.487,0.472">
@@ -23,8 +23,8 @@
                     Active
                     </TextBlock>
                     <Separator BorderBrush="AliceBlue"/>
-                    <TextBlock TextAlignment="center" FontSize="145" >
-                        #
+                    <TextBlock x:Name="activeText" TextAlignment="center" FontSize="145" >
+                        
                     </TextBlock>
                 </StackPanel>
             </Border>
@@ -35,6 +35,7 @@
                     Recent Clients
                     </TextBlock>
                     <Separator BorderBrush="AliceBlue"/>
+                    <TextBlock Margin="20,60" Text=";/ Under Work" x:Name="recentClient" TextAlignment="Center" FontSize="50"/>
 
                 </StackPanel>
             </Border>
