@@ -46,7 +46,7 @@ namespace ClientBook.Pages
             }
 
             this.ClientGrid.ItemsSource = clients.ToList();
-           
+            
 
         }
     }
