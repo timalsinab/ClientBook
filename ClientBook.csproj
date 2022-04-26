@@ -223,6 +223,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ClientManagementSystem.mdf</DependentUpon>
     </Content>
+    <Resource Include="Resources\Search_ClientIcon.png" />
     <Resource Include="Resources\Edit_UnlockedIcon.png" />
     <Resource Include="Resources\Edit_LockedIcon.png" />
     <Resource Include="Resources\Edit_ClientIcon.png" />

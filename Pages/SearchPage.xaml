@@ -16,24 +16,30 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="25"/>
         </Grid.ColumnDefinitions>
 
-        <WrapPanel Grid.Row="1" Grid.Column="1" >
-            <TextBlock Margin="55,0,20,0" FontSize="45">Search by:</TextBlock>
-            <ComboBox Background="LightBlue" VerticalAlignment="Center" Text="Select" Height="55" Margin="40,0" FontSize ="30" Width="200">
-                <ComboBoxItem FontSize="30">Name</ComboBoxItem>
-                <ComboBoxItem FontSize="30">Address</ComboBoxItem>
-                <ComboBoxItem FontSize="30">Number</ComboBoxItem>
+        <WrapPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" >
+            <TextBlock Margin="55,0,20,0" FontSize="45"><Run Text="Search by:"/></TextBlock>
+            <ComboBox x:Name="searchMenu" Background="LightBlue" VerticalAlignment="Center" Text="Select" Height="55" Margin="40,0" FontSize ="30" Width="200">
+                <ComboBoxItem FontSize="30" Content="Name"/>
+                <ComboBoxItem FontSize="30" Content="Address"/>
+                <ComboBoxItem FontSize="30" Content="Number"/>
+                <ComboBoxItem FontSize="30" Content="Email"/>
             </ComboBox>
-            <TextBlock  FontSize="45">Data:</TextBlock>
-            <TextBox VerticalAlignment="Center" TextAlignment="Center" Height ="55"  Width="250" Background="LightBlue" Margin="40,0" FontSize="25"/>
+            <TextBlock  FontSize="45"><Run Text="Data:"/></TextBlock>
+            <TextBox x:Name="dataEntry" VerticalAlignment="Center" TextAlignment="Center" Height ="55"  Width="250" Background="LightBlue" Margin="40,0" FontSize="25"/>
 
         </WrapPanel>
         <Rectangle StrokeThickness="3" Stroke="Blue" Grid.ColumnSpan="3" Grid.Row="1" Height="3" VerticalAlignment="Bottom" Fill="DarkBlue" HorizontalAlignment="Stretch"/>
 
-        <DataGrid x:Name="ClientGrid" Grid.Row="2" Grid.Column="1" Margin="33,32,27,50" FontSize="20"/>
+        <DataGrid x:Name="ClientGrid" Grid.Row="2" Grid.Column="1" Margin="10,48,454,38" FontSize="20" RenderTransformOrigin="0.475,0.473" Grid.ColumnSpan="2"/>
 
+        <Image Grid.Row="2" Grid.Column="2" Source="C:\Users\Kharela\source\repos\ClientBook\Resources\Search_ClientIcon.png" Margin="180,48,132,254"/>
+        <Button Grid.Column="2" Grid.Row="2" Margin="198,310,132,86" Click="Button_Click" >
+            <TextBlock Text="Search" FontSize="35"/>
+        </Button>
     </Grid>
 </Page>
