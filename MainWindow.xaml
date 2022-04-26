@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClientBook"
           Title="CM Authentication" Height="500" Width="300">
-
-    <Grid>
+    
+        <Grid>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15"/>
@@ -66,4 +66,5 @@
 
 
     </Grid>
+
 </Window>

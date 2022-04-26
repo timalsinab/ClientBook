@@ -31,7 +31,8 @@ namespace ClientBook
         private void Search_Cick(object sender, RoutedEventArgs e)
         {
             button_Highlighter(2);
-            mainFrame.Navigate(new SearchPage());
+            SearchPage sp = new SearchPage(this);
+            mainFrame.Navigate(sp);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,7 +44,11 @@ namespace ClientBook
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             button_Highlighter(3);
-            mainFrame.Navigate(new EditClient());
+            mainFrame.Navigate(new AddClientPage());
+        }
+        public void NEditClient(EditClient ec)
+        {
+            mainFrame.Navigate(ec);
         }
 
         private void button_Highlighter(int buttonnum)

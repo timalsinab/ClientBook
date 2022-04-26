@@ -20,14 +20,21 @@ namespace ClientBook.Pages
     /// </summary>
     public partial class EditClient : Page
     {
-        public EditClient()
+        public EditClient(String name)
         {
             InitializeComponent();
+            load_data(name);
+            
         }
 
         private void Locked_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void load_data(string name)
+        {
+            NameEntry.Text = name;
         }
     }
 }
