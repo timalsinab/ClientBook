@@ -34,13 +34,14 @@ namespace ClientBook.Pages
             var clients = from c in db.Clientlists
                           select new
                           {
+                              id = c.Id,
                               Name = c.Name,
                               Address = c.Address,
                               Number = c.Number,
                               Email = c.Email
                           };
 
-            this.ClientGrid.ItemsSource = clients.ToList();
+            this.ClientGrid.ItemsSource = db.Clientlists.ToList();
             
 
         }
@@ -63,6 +64,7 @@ namespace ClientBook.Pages
                 var clients = from c in db.Clientlists
                               select new
                               {
+                                  id = c.Id,
                                   Name = c.Name,
                                   Address = c.Address,
                                   Number = c.Number,
@@ -74,6 +76,7 @@ namespace ClientBook.Pages
                               where c.Name.StartsWith(data)
                               select new
                               {
+                                  id = c.Id,
                                   Name = c.Name,
                                   Address = c.Address,
                                   Number = c.Number,
@@ -87,6 +90,7 @@ namespace ClientBook.Pages
                               where c.Address.StartsWith(data)
                               select new
                               {
+                                  id = c.Id,
                                   Name = c.Name,
                                   Address = c.Address,
                                   Number = c.Number,
@@ -100,6 +104,7 @@ namespace ClientBook.Pages
                               where c.Number.StartsWith(data)
                               select new
                               {
+                                  id = c.Id,
                                   Name = c.Name,
                                   Address = c.Address,
                                   Number = c.Number,
@@ -113,6 +118,7 @@ namespace ClientBook.Pages
                               where c.Email.StartsWith(data)
                               select new
                               {
+                                  id = c.Id,
                                   Name = c.Name,
                                   Address = c.Address,
                                   Number = c.Number,
@@ -133,11 +139,25 @@ namespace ClientBook.Pages
 
         private void ClientGrid_Selection(object sender, SelectionChangedEventArgs e)
         {
-        
-            
-            EditClient acp = new EditClient("Anish");
+            int id = 1;
+            if (this.ClientGrid.SelectedIndex >= 0)
+            {
+                if (this.ClientGrid.SelectedItems.Count >= 0)
+                {
 
-            this.hp.NEditClient(acp);
+                    if (this.ClientGrid.SelectedItems[0].GetType() == typeof(Clientlist))
+                    {
+
+                        Clientlist selectedClient = (Clientlist)this.ClientGrid.SelectedItems[0];
+                        id = selectedClient.Id;
+                        EditClient acp = new EditClient(id);
+
+                        this.hp.NEditClient(acp);
+                    }
+                }
+
+            }
+         
 
 
            /* if (data_selected != null)
