@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClientBook.Database;
 
 namespace ClientBook.Pages
 {
@@ -20,14 +21,36 @@ namespace ClientBook.Pages
     /// </summary>
     public partial class EditClient : Page
     {
-        public EditClient()
+        public EditClient(String name)
         {
             InitializeComponent();
+            load_data(name);
+            
         }
 
         private void Locked_Click(object sender, RoutedEventArgs e)
         {
+            Icon.Source = new BitmapImage(new Uri(@"C:\Users\Kharela\source\repos\ClientBook\Resources\Edit_UnlockedIcon.png", UriKind.RelativeOrAbsolute)); ;
 
+        }
+
+        private void load_data(string name)
+        {
+            MessageBox.Show("Inside Load_Data");
+            ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
+            var clients = from c in db.Clientlists
+                          where c.Name.Equals("Anish Kharel")
+                          select c;
+                          
+            foreach(var i in clients)
+            {
+                NameEntry.Text = i.Name;
+                AddressEntry.Text = i.Address;
+                NumberEntry.Text = i.Number;
+                EmailEntry.Text = i.Email;
+
+            }
+           
         }
     }
 }

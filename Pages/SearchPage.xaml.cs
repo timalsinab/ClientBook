@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ClientBook.Database;
+using ClientBook.Pages;
 
 
 namespace ClientBook.Pages
@@ -22,8 +24,10 @@ namespace ClientBook.Pages
     /// </summary>
     public partial class SearchPage : Page
     {
-        public SearchPage()
+        HomePage hp;
+        public SearchPage(HomePage hp)
         {
+            this.hp = hp;
             InitializeComponent();
 
             ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
@@ -35,15 +39,6 @@ namespace ClientBook.Pages
                               Number = c.Number,
                               Email = c.Email
                           };
-/*
-            foreach(var item in clients)
-            {
-                Console.WriteLine(item.ClientName);
-                Console.WriteLine(item.ClientAddress);
-                Console.WriteLine(item.ClientNumber);
-                Console.WriteLine(item.ClientEmail);
-                Console.WriteLine("------------------");
-            }*/
 
             this.ClientGrid.ItemsSource = clients.ToList();
             
@@ -53,13 +48,17 @@ namespace ClientBook.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Update_grid(searchMenu.Text, dataEntry.Text);
+            
         }
 
+       
         private void Update_grid(string menu_Selection, string data)
         {
+            
             try
             {
-
+                
+                
                 ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
                 var clients = from c in db.Clientlists
                               select new
@@ -131,5 +130,27 @@ namespace ClientBook.Pages
                 MessageBox.Show("No such clients were found! \n Please try again");
             }
         }
+
+        private void ClientGrid_Selection(object sender, SelectionChangedEventArgs e)
+        {
+        
+            
+            EditClient acp = new EditClient("Anish");
+
+            this.hp.NEditClient(acp);
+
+
+           /* if (data_selected != null)
+                {
+                MessageBox.Show("clicked");
+                acp = new EditClient(data_selected[0].ToString());
+                this.hp.NEditClient(acp);
+
+
+                }*/
+           
+
+        }
+      
     }
 }

@@ -30,18 +30,19 @@ namespace ClientBook.Pages
         }
         private void loadclientinfo(string name)
         {
+            int clientcounter = 0;
             ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
-            int clientnumber = 0;
+          
 
             var client = from a in db.Clientlists
                          select a;
             foreach (var i in client)
             {
-                clientnumber = i.Id;
+                clientcounter++;
             }
 
             WelcomeText.Text = "Welcome " + name +",";
-            activeText.Text = clientnumber.ToString();
+            activeText.Text = clientcounter.ToString();
 
         }
     }
