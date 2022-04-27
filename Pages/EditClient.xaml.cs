@@ -19,27 +19,39 @@ namespace ClientBook.Pages
     /// <summary>
     /// Interaction logic for EditClient.xaml
     /// </summary>
+    /// 
+
+    
     public partial class EditClient : Page
     {
-        public EditClient(String name)
+        int id;
+        public EditClient(int id)
         {
+            this.id = id;
             InitializeComponent();
-            load_data(name);
+            load_data();
+            
             
         }
 
         private void Locked_Click(object sender, RoutedEventArgs e)
         {
-            Icon.Source = new BitmapImage(new Uri(@"C:\Users\Kharela\source\repos\ClientBook\Resources\Edit_UnlockedIcon.png", UriKind.RelativeOrAbsolute)); ;
+            // Icon.Source = new BitmapImage(new Uri(@"C:\Users\Kharela\source\repos\ClientBook\Resources\Edit_UnlockedIcon.png", UriKind.RelativeOrAbsolute)); ;
+            Locked.Visibility = Visibility.Hidden;
+            unLocked.Visibility = Visibility.Visible;
+            NameEntry.IsReadOnly = false;
+            AddressEntry.IsReadOnly = false;
+            NumberEntry.IsReadOnly = false;
+            EmailEntry.IsReadOnly = false;
+
 
         }
 
-        private void load_data(string name)
+        private void load_data()
         {
-            MessageBox.Show("Inside Load_Data");
             ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
             var clients = from c in db.Clientlists
-                          where c.Name.Equals("Anish Kharel")
+                          where c.Id.Equals(this.id)
                           select c;
                           
             foreach(var i in clients)
@@ -51,6 +63,40 @@ namespace ClientBook.Pages
 
             }
            
+        }
+
+        private void unLocked_Click(object sender, RoutedEventArgs e)
+        {
+            unLocked.Visibility = Visibility.Hidden;
+            Locked.Visibility = Visibility.Visible;
+            NameEntry.IsReadOnly = true;
+            AddressEntry.IsReadOnly =true;
+            NumberEntry.IsReadOnly = true;
+            EmailEntry.IsReadOnly = true;
+
+            ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
+            var clients = from c in db.Clientlists
+                          where c.Id.Equals(this.id)
+                          select c;
+
+            foreach (var i in clients)
+            {
+                i.Name = NameEntry.Text;
+                i.Address = AddressEntry.Text;
+                i.Number = NumberEntry.Text;
+                i.Email = EmailEntry.Text;
+
+            }
+
+            db.SaveChanges();
+
+            
+
+
+
+
+
+
         }
     }
 }

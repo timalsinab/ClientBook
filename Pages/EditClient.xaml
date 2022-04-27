@@ -56,6 +56,9 @@
         <Button x:Name="Locked" Grid.Column="1" Grid.Row ="1" Click="Locked_Click" Width="180" Height="200" >
             <Image x:Name="Icon" Source="C:\Users\Kharela\source\repos\ClientBook\Resources\Edit_LockedIcon.png" Width="102" Height="121" RenderTransformOrigin="0.339,0.11"/>
         </Button>
+        <Button Visibility="Hidden" x:Name="unLocked" Grid.Column="1" Grid.Row ="1" Click="unLocked_Click" Width="180" Height="200" >
+            <Image x:Name="Icon_unlocked" Source="C:\Users\Kharela\source\repos\ClientBook\Resources\Edit_UnlockedIcon.png" Width="102" Height="121" RenderTransformOrigin="0.339,0.11"/>
+        </Button>
 
 
 

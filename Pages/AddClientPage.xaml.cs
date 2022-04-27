@@ -29,12 +29,28 @@ namespace ClientBook.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            ClientManagementSystemEntities1 db = new ClientManagementSystemEntities1();
             var clientName = NameEntry.Text;
             var clientAddress = AddressEntry.Text;
             var clientNumber = NumberEntry.Text;
             var clientEmail = EmailEntry.Text;
 
-         
+            Clientlist newclient = new Clientlist()
+            {
+                Name = clientName,
+                Address = clientAddress,
+                Number = clientNumber,
+                Email = clientEmail
+
+
+            };
+
+            db.Clientlists.Add(newclient);
+            db.SaveChanges();
+            
+
+            MessageBox.Show("Client Succesfully Added");
+
             
            
 
