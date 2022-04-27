@@ -45,10 +45,10 @@
             <TextBlock Grid.Row="3" Grid.Column="1" Text="Number:" Margin="15,10" />
             <TextBlock Grid.Row="4" Grid.Column="1" Text="Email:" Margin="15,10" />
 
-            <TextBox x:Name="NameEntry" Grid.Row="1" Grid.Column="2" Width="350" Height="85" VerticalAlignment="Bottom" Margin="15,10"  />
-            <TextBox x:Name="AddressEntry" Grid.Row="2" Grid.Column="2" Width="350" Height="85" VerticalAlignment="Bottom" Margin="15,10" />
-            <TextBox x:Name="NumberEntry" Grid.Row="3" Grid.Column="2" Width="350" Height="85" VerticalAlignment="Bottom" Margin="15,10"  />
-            <TextBox x:Name="EmailEntry" Grid.Row="4" Grid.Column="2" Width="350" Height="85" VerticalAlignment="Bottom" Margin="15,10"  />
+            <TextBox IsReadOnly="True" x:Name="NameEntry" Grid.Row="1" Grid.Column="2" Width="350" Height="85" VerticalAlignment="Bottom" Margin="15,10"  />
+            <TextBox IsReadOnly="True" x:Name="AddressEntry" FontSize="35" Grid.Row="2" Grid.Column="2" Width="350" Height="85" VerticalAlignment="Bottom" Margin="15,10" />
+            <TextBox IsReadOnly="True" x:Name="NumberEntry" Grid.Row="3" Grid.Column="2" Width="350" Height="85" VerticalAlignment="Bottom" Margin="15,10"  />
+            <TextBox IsReadOnly="True" x:Name="EmailEntry" FontSize="35" Grid.Row="4" Grid.Column="2" Width="350" Height="85" VerticalAlignment="Bottom" Margin="15,10"  />
 
 
         </Grid>

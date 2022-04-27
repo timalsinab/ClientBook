@@ -8,7 +8,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -134,17 +133,14 @@ namespace ClientBook.Pages
 
         private void ClientGrid_Selection(object sender, SelectionChangedEventArgs e)
         {
-          
-
-
-
-
-
-
-            EditClient acp = new EditClient("Aish");
+        
+            
+            EditClient acp = new EditClient("Anish");
 
             this.hp.NEditClient(acp);
-          /*  if (data_selected != null)
+
+
+           /* if (data_selected != null)
                 {
                 MessageBox.Show("clicked");
                 acp = new EditClient(data_selected[0].ToString());
